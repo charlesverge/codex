@@ -848,6 +848,11 @@ pub struct Tui {
     #[serde(default = "default_true")]
     pub show_tooltips: bool,
 
+    /// Show the initial welcome/help banner for the first session event.
+    /// Defaults to `true`.
+    #[serde(default = "default_true")]
+    pub show_welcome_banner: bool,
+
     /// Show informational notices about connected app server version differences.
     /// Defaults to `true`; this does not control compatibility errors or version status.
     #[serde(default = "default_true")]
