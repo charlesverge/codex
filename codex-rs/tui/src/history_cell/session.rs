@@ -192,7 +192,7 @@ pub(crate) fn new_session_info(
     ));
     let mut parts: Vec<Box<dyn HistoryCell>> = vec![Box::new(header)];
 
-    if is_first_event {
+    if is_first_event && local_settings.tui.show_welcome_banner {
         // Help lines below the header (new copy and list)
         let help_lines: Vec<Line<'static>> = vec![
             "  To get started, describe a task or try one of these commands:"
