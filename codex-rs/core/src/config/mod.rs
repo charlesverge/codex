@@ -2761,6 +2761,14 @@ fn resolve_web_search_config(config_toml: &ConfigToml) -> Option<WebSearchConfig
 }
 
 fn resolve_experimental_request_user_input_enabled(config_toml: &ConfigToml) -> bool {
+    if let Some(request_user_input) = config_toml
+        .tools
+        .as_ref()
+        .and_then(|tools| tools.request_user_input)
+    {
+        return request_user_input;
+    }
+
     config_toml
         .tools
         .as_ref()

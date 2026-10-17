@@ -4643,6 +4643,10 @@
         "experimental_request_user_input": {
           "$ref": "#/definitions/ExperimentalRequestUserInput"
         },
+        "request_user_input": {
+          "description": "Enables the request_user_input tool when set to true, disables when false.",
+          "type": "boolean"
+        },
         "update_plan": {
           "$ref": "#/definitions/UpdatePlanToolConfig"
         },
